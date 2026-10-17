@@ -543,9 +543,9 @@
         "秋冬层次",
         "微正式"
       ],
-      "status": "在途",
+      "status": "可穿",
       "photo": "",
-      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。 已到货，纳入日常推荐。"
     },
     {
       "id": "item-29",
@@ -618,7 +618,7 @@
         "春季",
         "秋季"
       ],
-      "note": "最稳的校园清爽组合，简单干净，适合日常高频穿。 鞋未到时可换 NB 530 银白。",
+      "note": "最稳的校园清爽组合，简单干净，适合日常高频穿。",
       "source": "original",
       "favorite": false
     },
@@ -636,7 +636,7 @@
         "春季",
         "秋季"
       ],
-      "note": "颜色清淡，学院感强，比白T更有一点层次。 鞋未到时可换 NB 530 银白。",
+      "note": "颜色清淡，学院感强，比白T更有一点层次。",
       "source": "original",
       "favorite": false
     },
@@ -654,7 +654,7 @@
         "春季",
         "秋季"
       ],
-      "note": "你衣柜里最像“轻学院”的一套，适合想稍微讲究一点的日子。 鞋未到时可换 NB 530 银白。",
+      "note": "你衣柜里最像“轻学院”的一套，适合想稍微讲究一点的日子。",
       "source": "original",
       "favorite": false
     },
@@ -673,7 +673,7 @@
         "春季",
         "秋季"
       ],
-      "note": "很适合秋天，英伦一点但不过分成熟。 鞋未到时可换 NB 530 银白。",
+      "note": "很适合秋天，英伦一点但不过分成熟。",
       "source": "original",
       "favorite": false
     },
@@ -692,7 +692,7 @@
         "秋季",
         "冬季"
       ],
-      "note": "偏书卷气，适合你想走干净、安静一点的时候。 鞋未到时可换 NB 530 银白。",
+      "note": "偏书卷气，适合你想走干净、安静一点的时候。",
       "source": "original",
       "favorite": false
     },
@@ -711,7 +711,7 @@
         "秋季",
         "冬季"
       ],
-      "note": "有层次但不费力，日常好穿。 鞋未到时可换 NB 530 银白。",
+      "note": "有层次但不费力，日常好穿。",
       "source": "original",
       "favorite": false
     },
@@ -747,7 +747,7 @@
         "春季",
         "秋季"
       ],
-      "note": "更年轻、更清爽，视觉比 NB 那套轻一点。 鞋未到时可换 NB 530 银白。",
+      "note": "更年轻、更清爽，视觉比 NB 那套轻一点。",
       "source": "original",
       "favorite": false
     },
@@ -840,7 +840,7 @@
         "秋季",
         "冬季"
       ],
-      "note": "成熟一点，但仍然干净，不会太老成。 鞋未到时可换 NB 530 银白。",
+      "note": "成熟一点，但仍然干净，不会太老成。",
       "source": "original",
       "favorite": false
     },
@@ -859,7 +859,7 @@
         "秋季",
         "冬季"
       ],
-      "note": "最适合你“清爽学院”定位的秋冬套装之一。 鞋未到时可换 NB 530 银白。",
+      "note": "最适合你“清爽学院”定位的秋冬套装之一。",
       "source": "original",
       "favorite": false
     },
@@ -1008,7 +1008,7 @@
         "春季",
         "秋季"
       ],
-      "note": "颜色柔和，很适合你想看起来温和一点的时候。 鞋未到时可换 NB 530 银白。",
+      "note": "颜色柔和，很适合你想看起来温和一点的时候。",
       "source": "original",
       "favorite": false
     },
@@ -1027,7 +1027,7 @@
         "春季",
         "秋季"
       ],
-      "note": "更像“学院风升级版”，很适合秋天。 鞋未到时可换 NB 530 银白。",
+      "note": "更像“学院风升级版”，很适合秋天。",
       "source": "original",
       "favorite": false
     },
@@ -1048,6 +1048,307 @@
       "note": "状态一般、只想舒服一点时用，但别天天这样穿。",
       "source": "original",
       "favorite": false
+    },
+    {
+      "id": "expanded-fresh-khaki",
+      "name": "白T与卡其｜轻学院",
+      "items": [
+        "item-1",
+        "item-23",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "白T、卡其裤和白蓝板鞋，适合轻松的校园日常。偏凉时可另加夹克。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-mist-lightdenim",
+      "name": "雾霾蓝与浅牛仔",
+      "items": [
+        "item-2",
+        "item-21",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "浅蓝上衣配灰白蓝牛仔，保持低饱和；鞋子用白蓝色呼应。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-grey-khaki",
+      "name": "灰T与卡其｜低饱和",
+      "items": [
+        "item-3",
+        "item-23",
+        "item-26"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "灰与卡其作为主色，银白运动鞋增加轻松感。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-linen-lightdenim",
+      "name": "米白衬衫与浅牛仔",
+      "items": [
+        "item-10",
+        "item-21",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "用米白棉麻与浅牛仔，和深色裤装轮换；衬衫单穿即可。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-stripe-denim",
+      "name": "条纹衬衫与蓝牛仔",
+      "items": [
+        "item-11",
+        "item-20",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上智院/组会",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "条纹提供细节，蓝牛仔与板鞋保持校园感；是否塞衣角按衬衫长度调整。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-cord-stripe",
+      "name": "灯芯绒叠条纹",
+      "items": [
+        "item-15",
+        "item-11",
+        "item-23",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "条纹衬衫作内层，灯芯绒夹克增加面料层次。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-tan-hoodie",
+      "name": "浅棕夹克与灰卫衣",
+      "items": [
+        "item-16",
+        "item-8",
+        "item-20",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "浅棕、灰与蓝牛仔交替，适合想穿得柔和又舒服的一天。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-white-hoodie-khaki",
+      "name": "白卫衣与卡其",
+      "items": [
+        "item-7",
+        "item-23",
+        "item-28"
+      ],
+      "style": "休闲校园",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "白卫衣配卡其裤，和牛仔裤方案轮换；白蓝板鞋收尾。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-klein-khaki",
+      "name": "克莱因蓝与卡其",
+      "items": [
+        "item-6",
+        "item-23",
+        "item-28"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "上衣作为主要亮色，其余用卡其和白蓝鞋，避免颜色过多。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-green-lightdenim",
+      "name": "绿色T与浅牛仔",
+      "items": [
+        "item-5",
+        "item-21",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "绿色配浅牛仔与银白鞋，和全黑、深蓝的日常穿法换换口味。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-black-killshot",
+      "name": "全黑运动｜白蓝鞋提亮",
+      "items": [
+        "item-4",
+        "item-24",
+        "item-28"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "note": "黑T与黑卫裤保留舒适感，换白蓝板鞋作为视觉亮点。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-greycoat-whiteknit",
+      "name": "灰大衣与白高领",
+      "items": [
+        "item-18",
+        "item-12",
+        "item-23",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "灰大衣、白高领与卡其，适合想保留浅色学院感的秋冬；按实际气温增减保暖层。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-greycoat-hoodie",
+      "name": "灰大衣与灰卫衣",
+      "items": [
+        "item-18",
+        "item-8",
+        "item-20",
+        "item-26"
+      ],
+      "style": "秋冬层次",
+      "scene": "休闲出门",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "灰大衣叠灰卫衣，配蓝牛仔和运动鞋，整体更休闲。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-blackcoat-stripe",
+      "name": "黑大衣与条纹衬衫",
+      "items": [
+        "item-17",
+        "item-11",
+        "item-23",
+        "item-30"
+      ],
+      "style": "微正式",
+      "scene": "组会/汇报",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "薄黑大衣与条纹衬衫配卡其裤、牛津鞋，适合温和天气里的汇报；不按严寒穿搭理解。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-tan-linen",
+      "name": "浅棕夹克与米白衬衫",
+      "items": [
+        "item-16",
+        "item-10",
+        "item-23",
+        "item-30"
+      ],
+      "style": "微正式",
+      "scene": "组会/汇报",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "浅棕、米白与卡其作相近色搭配，牛津鞋让整体更利落；面料厚薄按当天温度判断。",
+      "source": "manual",
+      "favorite": false
+    },
+    {
+      "id": "expanded-suit-blackknit",
+      "name": "黑高领与棕色西装",
+      "items": [
+        "item-13",
+        "item-19",
+        "item-30"
+      ],
+      "style": "微正式",
+      "scene": "正式场合",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "黑高领配棕色西装套装与牛津鞋，提供衬衫之外的正式场合选择。",
+      "source": "manual",
+      "favorite": false
     }
   ],
   "history": [],
@@ -1061,6 +1362,6 @@
     "avoidRecent": true,
     "note": "先用已有单品，以清爽学院、休闲校园为主。季节仅作粗筛，实际保暖请结合当地气温。"
   },
-  "revision": 2,
-  "updatedAt": "2026-10-16T12:50:19.781Z"
+  "revision": 3,
+  "updatedAt": "2026-10-17T12:49:32.305Z"
 }
