@@ -1,0 +1,1066 @@
+{
+  "items": [
+    {
+      "id": "item-1",
+      "name": "白色短袖",
+      "category": "上衣",
+      "color": "#eeeae0",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-2",
+      "name": "雾霾蓝短袖",
+      "category": "上衣",
+      "color": "#94b2c8",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-3",
+      "name": "灰色短袖",
+      "category": "上衣",
+      "color": "#a6a6a2",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-4",
+      "name": "黑色短袖",
+      "category": "上衣",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-5",
+      "name": "绿色短袖",
+      "category": "上衣",
+      "color": "#75896d",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-6",
+      "name": "克莱因蓝短袖",
+      "category": "上衣",
+      "color": "#2342bb",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-7",
+      "name": "白色卫衣",
+      "category": "上衣",
+      "color": "#eeeae0",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-8",
+      "name": "灰色卫衣",
+      "category": "上衣",
+      "color": "#a6a6a2",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-9",
+      "name": "黑色卫衣",
+      "category": "上衣",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-10",
+      "name": "米白棉麻衬衫",
+      "category": "上衣",
+      "color": "#e6dfce",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-11",
+      "name": "条纹尖领衬衫",
+      "category": "上衣",
+      "color": "#b5b9b5",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-12",
+      "name": "白色高领毛衣",
+      "category": "上衣",
+      "color": "#eeeae0",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-13",
+      "name": "黑色高领毛衣",
+      "category": "上衣",
+      "color": "#303338",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-14",
+      "name": "黑色冲锋衣",
+      "category": "外套",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-15",
+      "name": "黑灰灯芯绒夹克",
+      "category": "外套",
+      "color": "#55565a",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-16",
+      "name": "浅棕双面夹克",
+      "category": "外套",
+      "color": "#bb9b77",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-17",
+      "name": "薄黑色长大衣",
+      "category": "外套",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-18",
+      "name": "厚灰色羊绒大衣",
+      "category": "外套",
+      "color": "#a6a6a2",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-19",
+      "name": "棕色西装套装",
+      "category": "套装",
+      "color": "#846b53",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "微正式",
+        "秋冬层次"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-20",
+      "name": "正常蓝牛仔裤",
+      "category": "裤子",
+      "color": "#6a8caa",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-21",
+      "name": "灰白蓝牛仔裤",
+      "category": "裤子",
+      "color": "#bac7d4",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-22",
+      "name": "复古黄蓝牛仔裤",
+      "category": "裤子",
+      "color": "#6b8190",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-23",
+      "name": "卡其裤",
+      "category": "裤子",
+      "color": "#b3a181",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-24",
+      "name": "黑色卫裤",
+      "category": "裤子",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-25",
+      "name": "花灰色卫裤",
+      "category": "裤子",
+      "color": "#a6a6a2",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-26",
+      "name": "NB 530 银白",
+      "category": "鞋子",
+      "color": "#d7dcdf",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-27",
+      "name": "Adidas Boost 纯黑",
+      "category": "鞋子",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-28",
+      "name": "Nike Killshot 2 白蓝",
+      "category": "鞋子",
+      "color": "#e8edf1",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "清爽学院",
+        "休闲校园",
+        "秋冬层次",
+        "微正式"
+      ],
+      "status": "在途",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-29",
+      "name": "添柏岚大黄靴",
+      "category": "鞋子",
+      "color": "#b38d4d",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "休闲校园"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-30",
+      "name": "黑色牛津鞋",
+      "category": "鞋子",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "微正式",
+        "秋冬层次"
+      ],
+      "status": "可穿",
+      "photo": "",
+      "note": "从原穿搭器导入；季节与风格标签可自行调整。"
+    },
+    {
+      "id": "item-31",
+      "name": "黑色 Dr. Martens 1460",
+      "category": "鞋子",
+      "color": "#303338",
+      "seasons": [
+        "春季",
+        "秋季",
+        "冬季"
+      ],
+      "styles": [
+        "休闲校园",
+        "秋冬层次"
+      ],
+      "status": "在家",
+      "photo": "",
+      "note": "在家，偏重且磨脚，暂不参与日常推荐。"
+    }
+  ],
+  "outfits": [
+    {
+      "id": "original-1",
+      "name": "清爽学院 01",
+      "items": [
+        "item-1",
+        "item-20",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "最稳的校园清爽组合，简单干净，适合日常高频穿。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-2",
+      "name": "清爽学院 02",
+      "items": [
+        "item-2",
+        "item-23",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "颜色清淡，学院感强，比白T更有一点层次。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-3",
+      "name": "清爽学院 03",
+      "items": [
+        "item-10",
+        "item-23",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "你衣柜里最像“轻学院”的一套，适合想稍微讲究一点的日子。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-4",
+      "name": "清爽学院 04",
+      "items": [
+        "item-15",
+        "item-1",
+        "item-23",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "很适合秋天，英伦一点但不过分成熟。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-5",
+      "name": "清爽学院 05",
+      "items": [
+        "item-12",
+        "item-17",
+        "item-20",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "偏书卷气，适合你想走干净、安静一点的时候。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-6",
+      "name": "清爽学院 06",
+      "items": [
+        "item-8",
+        "item-17",
+        "item-20",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上智院/组会",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "有层次但不费力，日常好穿。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-7",
+      "name": "休闲校园 01",
+      "items": [
+        "item-8",
+        "item-20",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "最省心的图书馆组合，舒服、耐看、零门槛。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-8",
+      "name": "休闲校园 02",
+      "items": [
+        "item-7",
+        "item-21",
+        "item-28"
+      ],
+      "style": "休闲校园",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "更年轻、更清爽，视觉比 NB 那套轻一点。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-9",
+      "name": "休闲校园 03",
+      "items": [
+        "item-16",
+        "item-1",
+        "item-20",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "暖色外套会让整体更柔和，不会太直男。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-10",
+      "name": "休闲校园 04",
+      "items": [
+        "item-14",
+        "item-3",
+        "item-20",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "偏功能风，雨天和赶路日特别实用。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-11",
+      "name": "休闲校园 05",
+      "items": [
+        "item-6",
+        "item-20",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "上半身颜色更醒目，适合状态好、想看起来精神一点的时候。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-12",
+      "name": "休闲校园 06",
+      "items": [
+        "item-4",
+        "item-24",
+        "item-27"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "纯休闲运动风，舒服但不建议连续很多天都这样穿。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-13",
+      "name": "秋冬层次 01",
+      "items": [
+        "item-13",
+        "item-18",
+        "item-20",
+        "item-28"
+      ],
+      "style": "秋冬层次",
+      "scene": "上课图书馆",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "成熟一点，但仍然干净，不会太老成。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-14",
+      "name": "秋冬层次 02",
+      "items": [
+        "item-12",
+        "item-15",
+        "item-23",
+        "item-28"
+      ],
+      "style": "秋冬层次",
+      "scene": "上课图书馆",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "最适合你“清爽学院”定位的秋冬套装之一。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-15",
+      "name": "秋冬层次 03",
+      "items": [
+        "item-9",
+        "item-24",
+        "item-29"
+      ],
+      "style": "秋冬层次",
+      "scene": "休闲出门",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "休闲偏硬朗，适合想换换口味时穿。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-16",
+      "name": "秋冬层次 04",
+      "items": [
+        "item-10",
+        "item-17",
+        "item-23",
+        "item-30"
+      ],
+      "style": "秋冬层次",
+      "scene": "上课图书馆",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "比西装松弛，又比普通校园穿搭正式一点。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-17",
+      "name": "微正式 01",
+      "items": [
+        "item-10",
+        "item-23",
+        "item-30"
+      ],
+      "style": "微正式",
+      "scene": "组会/汇报",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "不穿西装也能显得认真，组会和正式一点的见面都能用。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-18",
+      "name": "微正式 02",
+      "items": [
+        "item-12",
+        "item-17",
+        "item-23",
+        "item-30"
+      ],
+      "style": "微正式",
+      "scene": "组会/汇报",
+      "seasons": [
+        "秋季",
+        "冬季"
+      ],
+      "note": "有点知识分子感，但不会太装。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-19",
+      "name": "微正式 03",
+      "items": [
+        "item-11",
+        "item-19",
+        "item-30"
+      ],
+      "style": "微正式",
+      "scene": "正式场合",
+      "seasons": [
+        "春季",
+        "夏季",
+        "秋季",
+        "冬季"
+      ],
+      "note": "正式场合直接用，尖头牛津鞋只在这类场景再上。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-20",
+      "name": "休闲校园 07",
+      "items": [
+        "item-5",
+        "item-20",
+        "item-26"
+      ],
+      "style": "休闲校园",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "偏自然、随性，适合不想太费劲但又不想全黑全灰的时候。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-21",
+      "name": "休闲校园 08",
+      "items": [
+        "item-1",
+        "item-22",
+        "item-29"
+      ],
+      "style": "休闲校园",
+      "scene": "休闲出门",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "更有街头感，偶尔穿挺有存在感。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-22",
+      "name": "清爽学院 07",
+      "items": [
+        "item-2",
+        "item-16",
+        "item-21",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上智院/组会",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "颜色柔和，很适合你想看起来温和一点的时候。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-23",
+      "name": "清爽学院 08",
+      "items": [
+        "item-15",
+        "item-10",
+        "item-20",
+        "item-28"
+      ],
+      "style": "清爽学院",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "更像“学院风升级版”，很适合秋天。 鞋未到时可换 NB 530 银白。",
+      "source": "original",
+      "favorite": false
+    },
+    {
+      "id": "original-24",
+      "name": "休闲校园 09",
+      "items": [
+        "item-3",
+        "item-25",
+        "item-27"
+      ],
+      "style": "休闲校园",
+      "scene": "上课图书馆",
+      "seasons": [
+        "春季",
+        "秋季"
+      ],
+      "note": "状态一般、只想舒服一点时用，但别天天这样穿。",
+      "source": "original",
+      "favorite": false
+    }
+  ],
+  "history": [],
+  "rules": {
+    "stylePriority": [
+      "清爽学院",
+      "休闲校园",
+      "秋冬层次",
+      "微正式"
+    ],
+    "avoidRecent": true,
+    "note": "先用已有单品，以清爽学院、休闲校园为主。季节仅作粗筛，实际保暖请结合当地气温。"
+  },
+  "revision": 2,
+  "updatedAt": "2026-10-16T12:50:19.781Z"
+}
