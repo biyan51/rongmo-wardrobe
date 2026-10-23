@@ -1,4 +1,5 @@
 import type { Filters, Item, Outfit, WardrobeData } from "./types";
+import { validTemperature, temperatureFit, warmthOf } from "./temperature";
 
 const isTee = (item: Item) => /短袖|T恤|T-shirt/i.test(item.name);
 const isShirt = (item: Item) => /衬衫/.test(item.name);
@@ -9,14 +10,16 @@ export function optionalOuterLayers(data: WardrobeData, outfit: Outfit, filters?
   const worn = outfit.items.map(id => data.items.find(x => x.id === id)).filter(Boolean) as Item[];
   if (worn.some(x => x.category === "外套" || x.category === "套装") || worn.filter(x => x.category === "上衣").length > 1) return [];
   const tee = worn.find(x => x.category === "上衣" && isTee(x));
-  const season = filters?.season || "";
+  const temperature = validTemperature(filters?.temperature) ? filters.temperature : null;
+  const season = temperature === null ? filters?.season || "" : "";
   const candidates = data.items.filter(x => !outfit.items.includes(x.id)
     && (filters?.includeUnavailable || x.status === "可穿")
     && (x.category === "外套" || (!!tee && x.category === "上衣" && isShirt(x)))
     && x.styles.includes(outfit.style)
-    && (season ? x.seasons.includes(season) : x.seasons.some(s => outfit.seasons.includes(s))));
+    && (temperature !== null ? temperatureFit([...worn,x],temperature).compatible : season ? x.seasons.includes(season) : x.seasons.some(s => outfit.seasons.includes(s))));
   const score = (x: Item) => {
     let value = x.category === "外套" ? 5 : 3;
+    if (temperature !== null) value -= temperatureFit([...worn,x],temperature).distance * 10;
     if (/夹克/.test(x.name)) value += 7;
     if (outfit.style === "清爽学院" && /灯芯绒|衬衫/.test(x.name)) value += 4;
     if (outfit.style === "休闲校园" && /夹克|冲锋衣/.test(x.name)) value += 3;
@@ -45,6 +48,8 @@ function shape(items: Item[]) {
 }
 
 export function recommend(data: WardrobeData, filters: Filters): Outfit[] {
+  const temperature = validTemperature(filters.temperature) ? filters.temperature : null;
+  if (temperature !== null) filters = {...filters,season:""};
   const usable = data.items.filter(x => filters.includeUnavailable || x.status === "可穿");
   const map = new Map(usable.map(x => [x.id,x]));
   const selected = filters.selected.map(id => map.get(id));
@@ -64,23 +69,28 @@ export function recommend(data: WardrobeData, filters: Filters): Outfit[] {
   for (const style of filters.style ? [filters.style] : data.rules.stylePriority) {
     const scene = filters.scene || (style === "微正式" ? "组会/汇报" : "上课图书馆");
     if (scene === "正式场合" && style !== "微正式") continue;
-    const needOuter = selectedItems.some(x => x.category === "外套") || filters.season === "冬季" || style === "秋冬层次";
+    const needOuter = selectedItems.some(x => x.category === "外套") || (temperature !== null && temperature < 16) || filters.season === "冬季" || style === "秋冬层次";
     const jackets = pool("外套",style);
     const outers: (Item|null)[] = needOuter ? jackets : [null,...jackets];
     const append = (items: Item[]) => {
       const ids = items.map(x => x.id), key = garmentKey(ids);
       if (seen.has(key) || !filters.selected.every(id => ids.includes(id))) return;
-      const commonSeasons = items.reduce((acc,x) => acc.filter(s => x.seasons.includes(s)),["春季","夏季","秋季","冬季"]);
+      let commonSeasons = items.reduce((acc,x) => acc.filter(s => x.seasons.includes(s)),["春季","夏季","秋季","冬季"]);
+      if (temperature !== null && !commonSeasons.length) commonSeasons = [...new Set(items.flatMap(x=>x.seasons))];
       if (!commonSeasons.length || (filters.season && !commonSeasons.includes(filters.season))) return;
+      if (temperature !== null && !temperatureFit(items,temperature).compatible) return;
       seen.add(key);
       const lead = items.find(x => x.category === "外套" || x.category === "套装") || items[0];
       results.push({id:`rule-${key}`,name:`${lead.name} · ${style}`,items:ids,style,scene,seasons:commonSeasons,
-        note:"按已有单品标签组合，供试穿参考；面料、廓形与实际温度仍需你判断。",source:"rule",favorite:false});
+        note:temperature!==null?"按参考温度与已有单品类型组合，保暖层已列入本套；面料厚薄仍需试穿确认。":"按已有单品标签组合，供试穿参考；面料、廓形与实际温度仍需你判断。",source:"rule",favorite:false});
     };
     if (!selectedItems.some(x => x.category === "套装") && scene !== "正式场合") {
       for (const top of pool("上衣",style)) for (const bottom of pool("裤子",style)) for (const shoe of pool("鞋子",style)) for (const outer of outers) {
         if (filters.season === "冬季" && (isTee(top) || /棉麻/.test(top.name))) continue;
         append([...(outer ? [outer] : []),top,bottom,shoe]);
+        if (temperature !== null && temperature < 16 && outer && isTee(top)) {
+          for (const middle of usable.filter(x=>x.category==="上衣" && x.id!==top.id && x.styles.includes(style) && warmthOf(x)>=3)) append([outer,top,middle,bottom,shoe]);
+        }
       }
     }
     if (!selectedItems.some(x => x.category === "裤子" || x.category === "外套")) {
@@ -91,22 +101,25 @@ export function recommend(data: WardrobeData, filters: Filters): Outfit[] {
   const recent = new Set(data.rules.avoidRecent ? data.history.filter(h => {
     const elapsed = Date.now()-new Date(h.date+"T00:00:00").getTime();return elapsed>=0 && elapsed<7*86400000;
   }).map(h => garmentKey(h.items.map(x => x.id))) : []);
-  const ranked = results.map((outfit,index) => {
+  const ranked = results.filter(outfit=>temperature === null || temperatureFit(outfit.items.map(id=>map.get(id)!),temperature).compatible).map((outfit,index) => {
     const items = outfit.items.map(id => map.get(id)!);
     const heavy = items.some(x => /厚|羊绒/.test(x.name));
     const score = (outfit.favorite?30:0)+(outfit.source!=="rule"?9:0)+(4-Math.max(0,data.rules.stylePriority.indexOf(outfit.style)))*2
       -(recent.has(garmentKey(outfit.items))?40:0)-items.filter(x => x.status!=="可穿").length*10
       -(!filters.season && heavy?3:0);
     const free=outfit.items.filter(id => !filters.selected.includes(id));
-    return {outfit,score,index,shape:shape(items),free,freeSet:new Set(free)};
-  }).sort((a,b) => b.score-a.score || a.index-b.index);
+    const fit = temperature === null ? null : temperatureFit(items,temperature);
+    return {outfit,score:score-(fit?.distance||0)*6,tier:fit?.tier||0,index,shape:shape(items),free,freeSet:new Set(free)};
+  }).sort((a,b) => a.tier-b.tier || b.score-a.score || a.index-b.index);
   // Diversify only the visible first pages. Fixed selections never count as repetition.
   const candidates = ranked.slice(0,1800), picked: typeof ranked = [], pickedIds = new Set<string>(), usedShapes = new Set<string>();
   const itemUse = new Map<string,number>();
   while (picked.length<24 && picked.length<candidates.length) {
+    const bestTier = candidates.find(x=>!pickedIds.has(x.outfit.id))?.tier;
     let best: typeof ranked[number]|undefined, bestScore=-Infinity;
     for (const candidate of candidates) {
       if (pickedIds.has(candidate.outfit.id)) continue;
+      if (candidate.tier !== bestTier) continue;
       const repeated = candidate.free.reduce((n,id) => n+(itemUse.get(id)||0),0);
       let similarity=0;
       for(const previous of picked){

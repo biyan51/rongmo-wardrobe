@@ -10,5 +10,5 @@ export type Wear = { id: string; date: string; name: string; items: { id: string
 export type Rules = { stylePriority: string[]; avoidRecent: boolean; note: string };
 export type WardrobeData = { items: Item[]; outfits: Outfit[]; history: Wear[]; rules: Rules };
 export type Snapshot = WardrobeData & { revision: number; updatedAt: string; journalRevision?: number };
-export type Filters = { selected: string[]; style: string; scene: string; season: string; includeUnavailable: boolean };
+export type Filters = { selected: string[]; style: string; scene: string; season: string; includeUnavailable: boolean; temperature?: number | null };
 
