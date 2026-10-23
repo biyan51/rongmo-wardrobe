@@ -19,6 +19,23 @@ export function searchUrl(query: string) {
   if (name.length < 2 || name.length > 80) throw new Error("请输入 2–80 个字的城市名。");
   return `https://geocoding-api.open-meteo.com/v1/search?${new URLSearchParams({ name, count: "6", language: "zh", format: "json" })}`;
 }
+export function districtSearchUrl(query: string) {
+  searchUrl(query);
+  const params = new URLSearchParams({ q: query.trim(), limit: "6" });
+  for (const layer of ["city", "district", "county"]) params.append("layer", layer);
+  return `https://photon.komoot.io/api/?${params}`;
+}
+export function parseDistrictLocations(raw: unknown): WeatherLocation[] {
+  const features = (raw as { features?: { properties?: Record<string, unknown>; geometry?: { coordinates?: unknown[] } }[] })?.features;
+  if (!Array.isArray(features)) return [];
+  return features.flatMap(feature => {
+    const p = feature?.properties, coordinates = feature?.geometry?.coordinates;
+    if (!p || typeof p.name !== "string" || !number(p.osm_id) || !coordinates || !number(coordinates[0]) || !number(coordinates[1]) || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90) return [];
+    const label = [...new Set([p.name, p.city, p.state, p.country].filter(v => typeof v === "string" && v))].join(" · ");
+    const kind = p.osm_type === "N" ? 1 : p.osm_type === "W" ? 2 : 3;
+    return [{ id: -(p.osm_id * 10 + kind), label, ...coarseCoordinates({ latitude: coordinates[1], longitude: coordinates[0] }) }];
+  }).slice(0, 6);
+}
 export function parseWeather(raw: unknown): Weather {
   const x = raw as { current?: Record<string, unknown>; daily?: Record<string, unknown[]>; timezone?: unknown; current_units?: Record<string, unknown>; daily_units?: Record<string, unknown> };
   const c = x?.current, d = x?.daily;
@@ -37,7 +54,7 @@ export function parseLocations(raw: unknown): WeatherLocation[] {
   return results.flatMap(value => {
     const x = value as Record<string, unknown>;
     if (!x || !number(x.id) || typeof x.name !== "string" || !number(x.latitude) || !number(x.longitude) || Math.abs(x.latitude) > 90 || Math.abs(x.longitude) > 180) return [];
-    return [{ id: x.id, label: [...new Set([x.name, x.admin1, x.country].filter(v => typeof v === "string" && v))].join(" · "), ...coarseCoordinates({ latitude: x.latitude, longitude: x.longitude }) }];
+    return [{ id: x.id, label: [...new Set([x.name, x.admin2, x.admin1, x.country].filter(v => typeof v === "string" && v))].join(" · "), ...coarseCoordinates({ latitude: x.latitude, longitude: x.longitude }) }];
   }).slice(0, 6);
 }
 export async function weatherJson(url: string, options: RequestInit = {}, signal?: AbortSignal): Promise<unknown> {
@@ -59,15 +76,19 @@ export async function getWeather(location: Coordinates, transport: WeatherTransp
 }
 export async function findLocations(query: string, transport: WeatherTransport, signal?: AbortSignal): Promise<WeatherLocation[]> {
   const url = searchUrl(query);
-  return parseLocations(await weatherJson(transport === "direct" ? url : `/api/locations?name=${encodeURIComponent(query.trim())}`, {}, signal));
+  if (transport !== "direct") return parseLocations(await weatherJson(`/api/locations?name=${encodeURIComponent(query.trim())}`, {}, signal));
+  let raw;
+  try { raw = await weatherJson(url, {}, signal); } catch (error) { if (signal?.aborted) throw error; }
+  const found = parseLocations(raw);
+  return found.length ? found : parseDistrictLocations(await weatherJson(districtSearchUrl(query), {}, signal));
 }
 export function geolocationError(error: { code?: number }) {
   return error.code === 1 ? "定位未获授权。可以直接输入城市，不影响使用衣柜。" : error.code === 3 ? "定位超时了，可以再试一次，或手动选择城市。" : "暂时无法确定位置，请手动选择城市。";
 }
-export function locate(geolocation: Pick<Geolocation, "getCurrentPosition">): Promise<Coordinates> {
+export function locate(geolocation: Pick<Geolocation, "getCurrentPosition">, district = false): Promise<Coordinates> {
   return new Promise((resolve, reject) => geolocation.getCurrentPosition(position => {
     try { resolve(coarseCoordinates(position.coords)); } catch (error) { reject(error); }
-  }, error => reject(new Error(geolocationError(error))), { enableHighAccuracy: false, timeout: 12_000, maximumAge: 300_000 }));
+  }, error => reject(new Error(geolocationError(error))), { enableHighAccuracy: district, timeout: 12_000, maximumAge: district ? 60_000 : 300_000 }));
 }
 export function weatherLabel(code: number) {
   if (code === 0) return "晴";
