@@ -3,6 +3,9 @@ export type WeatherLocation = Coordinates & { id: number; label: string };
 export type Weather = { temperature: number; feelsLike: number; low: number; high: number; code: number; rainChance: number | null; wind: number; time: number; timezone: string };
 export type WeatherTransport = "server" | "direct";
 const WEATHER_ERROR = "暂时取不到天气，请稍后重试，衣柜仍可照常使用。";
+export class WeatherHTTPError extends Error {
+  constructor(public status: number) { super(WEATHER_ERROR); this.name = "WeatherHTTPError"; }
+}
 const number = (x: unknown): x is number => typeof x === "number" && Number.isFinite(x);
 
 export function coarseCoordinates(value: Coordinates): Coordinates {
@@ -57,22 +60,31 @@ export function parseLocations(raw: unknown): WeatherLocation[] {
     return [{ id: x.id, label: [...new Set([x.name, x.admin2, x.admin1, x.country].filter(v => typeof v === "string" && v))].join(" · "), ...coarseCoordinates({ latitude: x.latitude, longitude: x.longitude }) }];
   }).slice(0, 6);
 }
-export async function weatherJson(url: string, options: RequestInit = {}, signal?: AbortSignal): Promise<unknown> {
+export async function weatherJson(url: string, options: RequestInit = {}, signal?: AbortSignal, timeoutMs = 12_000): Promise<unknown> {
   const controller = new AbortController();
   const abort = () => controller.abort();
-  const timer = setTimeout(abort, 12_000);
+  const timer = setTimeout(abort, timeoutMs);
   if (signal?.aborted) abort();
   else signal?.addEventListener("abort", abort, { once: true });
   try {
     const response = await fetch(url, { ...options, cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer", signal: controller.signal });
-    if (!response.ok) throw new Error(WEATHER_ERROR);
+    if (!response.ok) throw new WeatherHTTPError(response.status);
     return await response.json();
   } finally { clearTimeout(timer); signal?.removeEventListener("abort", abort); }
 }
 export async function getWeather(location: Coordinates, transport: WeatherTransport, signal?: AbortSignal): Promise<Weather> {
   const point = coarseCoordinates(location);
-  const raw = transport === "direct" ? await weatherJson(forecastUrl(point), {}, signal) : await weatherJson("/api/weather", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(point) }, signal);
-  return parseWeather(raw);
+  if (transport === "server") {
+    try {
+      const raw = await weatherJson("/api/weather", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(point) }, signal, 9_000);
+      return parseWeather(raw);
+    } catch (error) {
+      if (signal?.aborted || error instanceof WeatherHTTPError && [400, 401, 403].includes(error.status)) throw error;
+      // The same provider may be reachable from the device when the hosted egress is failing.
+      // Keep the same rounded coordinates; never repeat geolocation or switch providers.
+    }
+  }
+  return parseWeather(await weatherJson(forecastUrl(point), {}, signal));
 }
 export async function findLocations(query: string, transport: WeatherTransport, signal?: AbortSignal): Promise<WeatherLocation[]> {
   const url = searchUrl(query);
